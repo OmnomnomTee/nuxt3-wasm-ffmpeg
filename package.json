@@ -1,0 +1,54 @@
+{
+  "name": "nuxt3-ffmpeg-demo",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .eslintignore .",
+    "lint:style": "stylelint **/*.{vue,css} --fix --ignore-path .eslintignore .",
+    "lint": "pnpm lint:js && pnpm lint:style",
+    "postinstall": "nuxt prepare && pnpm simple-git-hooks install"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,vue}": [
+      "eslint",
+      "prettier --write"
+    ],
+    "*.{css,vue}": "stylelint"
+  },
+  "dependencies": {
+    "nuxt": "^3.7.2",
+    "@ffmpeg/ffmpeg": "^0.12.6",
+    "@ffmpeg/util": "^0.12.1",
+    "@nuxtjs/google-fonts": "^3.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "17.6.7",
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "0.1.1",
+    "@nuxtjs/html-validator": "^1.5.2",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "lint-staged": "13.2.3",
+    "sass": "^1.66.1",
+    "simple-git-hooks": "2.8.1",
+    "stylelint": "15.10.3",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "34.0.0"
+  },
+  "resolutions": {
+    "consola": "3.2.3",
+    "semver": "< 6.0.0, >= 6.3.1"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm commitlint --edit $1",
+    "pre-commit": "pnpm lint-staged"
+  },
+  "packageManager": "pnpm@8.6.12"
+}

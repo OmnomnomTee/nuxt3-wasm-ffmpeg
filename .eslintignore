@@ -1,0 +1,7 @@
+node_modules
+src/public/wasm
+src/public/video
+src/public/image
+src/public/audio
+src/server/wasm
+*.md

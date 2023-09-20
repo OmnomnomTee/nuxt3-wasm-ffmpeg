@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+::selection {
+  background-color: black;
+  color: #fff;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+html {
+  accent-color: var(--accent-color);
+  caret-color: var(--accent-color);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body, #__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:target {
+    outline: none;
+  }
+}
+
+button, .btn {
+  --button-background-color: var(--text-color);
+
+  font: inherit;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  padding: .75rem 1rem;
+  border: 3px solid var(--button-background-color);
+  background: var(--button-background-color);
+  color: #fff;
+}
+
+*:focus-visible,
+[type="button"]:focus-visible,
+[type="reset"]:focus-visible,
+[type="submit"]:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+iframe:focus-visible {
+  outline: 9px double black;
+  box-shadow: 0 0 0 6px #fff;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *:focus-visible {
+    transition: outline-offset .15s linear;
+  }
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration-color: var(--color-brand);
+  text-decoration-thickness: .1em;
+}

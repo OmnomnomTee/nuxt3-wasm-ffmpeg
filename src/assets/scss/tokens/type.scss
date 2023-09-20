@@ -1,0 +1,29 @@
+:root {
+  --font-family: "Raleway",
+  -apple-system,
+  blinkmacsystemfont,
+  "Segoe UI",
+  roboto,
+  helvetica,
+  arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol";
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1500,18,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.72rem, calc(0.81rem + -0.09vw), 0.79rem);
+  --step--1: clamp(0.89rem, calc(0.89rem + 0.02vw), 0.90rem);
+  --step-0: clamp(1.00rem, calc(0.97rem + 0.17vw), 1.13rem);
+  --step-1: clamp(1.13rem, calc(1.05rem + 0.38vw), 1.41rem);
+  --step-2: clamp(1.27rem, calc(1.13rem + 0.67vw), 1.76rem);
+  --step-3: clamp(1.42rem, calc(1.21rem + 1.05vw), 2.20rem);
+  --step-4: clamp(1.60rem, calc(1.29rem + 1.55vw), 2.75rem);
+  --step-5: clamp(1.80rem, calc(1.36rem + 2.21vw), 3.43rem);
+  --step-6: clamp(2.03rem, calc(1.41rem + 3.07vw), 4.29rem);
+  --step-7: clamp(2.28rem, calc(1.44rem + 4.18vw), 5.36rem);
+  --step-8: clamp(2.57rem, calc(1.44rem + 5.61vw), 6.71rem);
+}
