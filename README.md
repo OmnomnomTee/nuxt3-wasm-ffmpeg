@@ -21,7 +21,7 @@ yarn install
 
 ## Development Server
 
-⚠ **_The demo does not work correctly in development mode. Please build the application for production and preview the production build._**  Th
+⚠ **_The demo does not work correctly in development mode. Please build the application for production and preview the production build._**
 
 Start the development server on `http://localhost:3000`:
 
